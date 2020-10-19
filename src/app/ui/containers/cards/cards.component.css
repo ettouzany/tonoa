@@ -1,0 +1,55 @@
+.card{
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+}
+.card-header{
+    font-weight: 600;
+    background: white;
+    border: 0;
+    border-radius: 16px;
+}
+/* card menu */
+.card-header .card-menu {
+    float: right;
+}
+
+.iconbtn{
+    border-radius: 56px;
+    padding: 0 6px;
+    padding-top: 5px;
+    margin: -6px -13px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.iconbtn:active { background: rgb(238, 238, 238); }
+.iconbtn:hover .actions { max-height:1000px; }
+.actions{
+    max-height: 0;
+    width: 146px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: white;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+    transition: max-height 0.5s;
+    z-index: 1;
+}
+.actions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.actions li{
+    padding: 16px;
+    cursor: pointer;
+}
+.actions li:hover{
+    background: rgb(245, 245, 245);
+}
+.actions li:active{
+    background: rgb(228, 228, 228);
+}

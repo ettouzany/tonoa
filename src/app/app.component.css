@@ -1,0 +1,41 @@
+.page {
+    display: table;
+    width: 100%;
+    height: calc(100%  - 72px) !important;
+  }
+  .page-content,
+  app-sidebar {
+    display: table-cell;
+  }
+  app-sidebar {
+    width: fit-content;
+  }
+.page-content{
+  background-color: #f0f3fb;
+  padding: 16px 0;
+  width: inherit;
+}
+.mypage{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.main,
+.chat {
+  display: table-cell;
+}
+.chat {
+  width: 352px;
+  background-color: white;
+  transition: all 0.3s;
+}
+.chatClose{
+  width: 0px !important;
+  max-width: 0;
+
+}
+.count{
+  overflow-y: auto;
+    height: inherit;
+    padding: 0 16px;
+}

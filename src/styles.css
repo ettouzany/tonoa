@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body, html {
+  height: 100%;
+}
+
+  .b-16 {
+    border-radius: 16px !important;
+  }
+  .b-32 {
+    border-radius: 32px !important;
+  }
+  .shadowbox{
+    box-shadow:0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1)
+  }
+  button:focus { outline: none; }

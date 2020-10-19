@@ -1,0 +1,19 @@
+<div class="menu " [ngClass]="{'activemenu': Menuopened(),'disactivemenu': !Menuopened(),'d-none': domobile,'menushow': (domobile && Menuopened())}">
+    <div class="countent">
+      <ul class="menuelement">
+        <li *ngFor="let element of menu" [ngClass]="{'open': element.open}" >
+          <span class="button" (click)="toOpen(element,null)"><i class="material-icons-two-tone">{{element.icon}}</i><span>{{element.title}}</span></span>
+          <ul *ngIf="element.submenus.length > 0">
+            <li *ngFor="let e of element.submenus" [ngClass]="{'open': e.open}" >
+               <span class="button" (click)="toOpen(element,e,null)"><i class="material-icons-two-tone">{{e.icon}}</i><span>{{e.title}}</span></span>
+              <ul *ngIf="e.submenus.length > 0">
+                <li *ngFor="let el of e.submenus">
+                  <span class="button" (click)="toOpen(element,e,el)"><i class="material-icons-two-tone">{{el.icon}}</i><span>{{el.title}}</span></span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</div>

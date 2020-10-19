@@ -1,0 +1,53 @@
+
+.bg{
+  background: url(/assets/login/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.b-0{ 
+  border: 0;
+}
+.line{
+  border-top: 1px solid gray;
+  margin: 32px 0;
+}
+.buttomtext a{
+  color: white;
+  font-weight: 600;
+}
+.buttomtext p{
+  margin-bottom: 0px;
+}
+.or{
+  width: fit-content;
+    padding: 16px;
+    margin: -28px auto;
+    font-size: small;
+    color: gray;
+}
+.w-80{
+  width: 80%;
+  margin: 10%;
+}
+form {
+  max-width: 300px;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+}
+.actions {
+  height: 62px;
+  background-color: #f9a826;
+  border: 0;
+}
+.actions:active {
+  height: 62px;
+  background-color: #f9a826 !important;
+  border: 0;
+}

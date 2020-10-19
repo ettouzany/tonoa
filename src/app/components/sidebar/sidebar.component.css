@@ -1,0 +1,92 @@
+::-webkit-scrollbar {
+    background: rgba(24, 188, 155, 0.2);
+    height: 16px;
+    position: fixed;
+    padding: 16px;
+    margin: 16px;
+}
+  ::-webkit-scrollbar:disabled {
+    background: transparent;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    height: 20px;
+    width: 6px;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(24, 188, 155, 0.6);
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(24, 188, 155, 0.75);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(24, 188, 155, 0.9);
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(24, 188, 155, 0.2);
+  }
+  
+  
+.menu{
+    width: 72px;
+    background-color: white;
+    transition: width 0.4s;
+    position: sticky;
+    height: calc(100vh - 72px);
+    top: 72px;
+    overflow: hidden;
+}
+.countent {
+    overflow-y: auto;
+    height: 100%;
+}
+.menu:hover{
+    width: 226px;
+}
+.menushow{
+    display: initial !important;
+    position: absolute;
+    z-index: 1;
+}
+.activemenu {
+    width: 226px;
+}
+.menuelement,ul{
+    list-style: none;
+    padding: 0;
+    
+}
+.menuelement li{
+    background-color: khaki;
+    margin: 16px;
+    border-radius: 8px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height .4s;
+
+}
+.open{
+    max-height:1000px !important;
+}
+.disactivemenu .open {
+    max-height: 40px !important;
+ 
+}
+.menu:hover .open {
+    max-height: 1000px !important;
+}
+li .button {
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+}
+li .button span {
+    margin-left: 8px;
+}
