@@ -1,0 +1,13 @@
+.alerts{
+    position: sticky;
+    height: 0;
+    top: 0;
+    z-index: 100;
+}
+.bgblack{
+    background: #00000040;
+    height: 100vh;
+    
+    padding-top: 102px;
+    margin-top: -100vh;
+}

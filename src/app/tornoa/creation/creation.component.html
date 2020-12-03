@@ -1,0 +1,47 @@
+<div class="card">
+    
+    <div class="card-header" *ngIf="!currentId">Nouvelle entité</div>
+    <div class="card-header" *ngIf="currentId">Editer entité</div>
+    <div class="card-body">
+            <form [formGroup]="entitesForm">
+        <div class="row">
+          <div class="form-group col-12">
+            <label>Nom :</label>
+            <input type="text" formControlName="nom" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
+            <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+              <div *ngIf="f.nom.errors.required">Le champs est oblégatoire</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="form-group col-12">
+            <label>Code :</label>
+            <input type="text" formControlName="code" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.code.errors }" />
+            <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+              <div *ngIf="f.code.errors.required">Le champs est oblégatoire</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <form (ngSubmit)="onCancel()" class="col-6">
+            <div class="float-right">
+              <button type="submit" class="btn btn-secondary" >Retour
+              </button>
+           </div>
+          </form>
+          <form (ngSubmit)="onSubmit()" class="col-6" >
+            <div class="">
+              <button   type="submit" class="btn btn-success">
+  
+               Valider</button>
+           </div>
+           </form>
+        </div>
+  
+      </form>
+    </div>
+</div>

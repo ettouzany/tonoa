@@ -8,8 +8,9 @@
         <div class="h-100 " [ngClass]="{'page-content': isLoggedIn()}">
 <div class="count">
     <router-outlet></router-outlet>
-    <app-footer  *ngIf = "isLoggedIn()"></app-footer>
 </div>
+<app-footer  *ngIf = "isLoggedIn()"></app-footer>
+
         </div>
     </div>    
     </div>

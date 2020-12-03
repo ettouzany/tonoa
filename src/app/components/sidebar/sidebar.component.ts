@@ -11,8 +11,8 @@ export class SidebarComponent implements OnInit {
   menu:Menu[] = [
     {
       open:false,
-      title:"home",
-      icon:"donut_small",
+      title:"My Tournaments",
+      icon:"emoji_events",
       link:"home",
       new:false,
       notifications:95,
@@ -20,8 +20,8 @@ export class SidebarComponent implements OnInit {
     },
     {
       open:false,
-      title:"Entites",
-      icon:"donut_small",
+      title:"Games",
+      icon:"sports_esports",
       link:"entites",
       new:false,
       notifications:95,
@@ -29,7 +29,7 @@ export class SidebarComponent implements OnInit {
         {
           open:false,
           title:"Creer",
-          icon:"donut_small",
+          icon:"add_circle",
           link:"creer",
           new:false,
           notifications:95,
@@ -38,7 +38,7 @@ export class SidebarComponent implements OnInit {
         {
           open:false,
           title:"Consulter",
-          icon:"donut_small",
+          icon:"list_alt",
           link:"consulter",
           new:false,
           notifications:95,
@@ -48,114 +48,170 @@ export class SidebarComponent implements OnInit {
     },
     {
       open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"home",
-      new:false,
-      notifications:95,
-      submenus: []
-    },
-    {
-      open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"home",
-      new:false,
-      notifications:95,
-      submenus: []
-    },
-    {
-      open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"home",
-      new:false,
-      notifications:95,
-      submenus: []
-    },
-    {
-      open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"home",
-      new:false,
-      notifications:95,
-      submenus: []
-    },
-    {
-      open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"home",
-      new:false,
-      notifications:95,
-      submenus: []
-    },
-        {
-      open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"home",
-      new:false,
-      notifications:95,
-      submenus: []
-    },
-    {
-      open:false,
-      title:"elements",
-      icon:"event_note",
-      link:"ui",
+      title:"Platforms",
+      icon:"important_devices",
+      link:"entites",
       new:false,
       notifications:95,
       submenus: [
         {
           open:false,
-          title:"UI",
-          icon:"donut_small",
-          link:"string",
-          new:false,
-          notifications:95,
-          submenus: [
-            { 
-              open:false,     
-              title:"string",
-              icon:"donut_small",
-              link:"string",
-              new:false,
-              notifications:95,
-              submenus: []
-            }
-          ]
-        },
-        {
-          open:false,
-          title:"UX",
-          icon:"donut_small",
-          link:"buttons",
+          title:"Creer",
+          icon:"add_circle",
+          link:"creer",
           new:false,
           notifications:95,
           submenus: []
         },
         {
           open:false,
-          title:"UX",
-          icon:"donut_small",
-          link:"cards",
+          title:"Consulter",
+          icon:"list_alt",
+          link:"consulter",
           new:false,
           notifications:95,
           submenus: []
-        }
+        },
       ]
     },
     {
       open:false,
-      title:"home",
-      icon:"donut_small",
-      link:"random",
+      title:"Countries",
+      icon:"public",
+      link:"entites",
       new:false,
       notifications:95,
-      submenus: []
+      submenus: [
+        {
+          open:false,
+          title:"Creer",
+          icon:"add_circle",
+          link:"creer",
+          new:false,
+          notifications:95,
+          submenus: []
+        },
+        {
+          open:false,
+          title:"Consulter",
+          icon:"list_alt",
+          link:"consulter",
+          new:false,
+          notifications:95,
+          submenus: []
+        },
+      ]
     },
+    // {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"home",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
+    // {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"home",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
+    // {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"home",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
+    // {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"home",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
+    // {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"home",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
+    //     {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"home",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
+    // {
+    //   open:false,
+    //   title:"elements",
+    //   icon:"event_note",
+    //   link:"ui",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: [
+    //     {
+    //       open:false,
+    //       title:"UI",
+    //       icon:"donut_small",
+    //       link:"string",
+    //       new:false,
+    //       notifications:95,
+    //       submenus: [
+    //         { 
+    //           open:false,     
+    //           title:"string",
+    //           icon:"donut_small",
+    //           link:"string",
+    //           new:false,
+    //           notifications:95,
+    //           submenus: []
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       open:false,
+    //       title:"UX",
+    //       icon:"donut_small",
+    //       link:"buttons",
+    //       new:false,
+    //       notifications:95,
+    //       submenus: []
+    //     },
+    //     {
+    //       open:false,
+    //       title:"UX",
+    //       icon:"donut_small",
+    //       link:"cards",
+    //       new:false,
+    //       notifications:95,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+    // {
+    //   open:false,
+    //   title:"home",
+    //   icon:"donut_small",
+    //   link:"random",
+    //   new:false,
+    //   notifications:95,
+    //   submenus: []
+    // },
   ];
   domobile:boolean;
   @HostListener('window:resize', ['$event'])

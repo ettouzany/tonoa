@@ -1,0 +1,12 @@
+.footer{
+    position: fixed;
+    width: inherit;
+    bottom: 0;
+    padding: 16px;
+    background: white;
+}
+img{
+    POSITION: absolute;
+    top: -10px;
+    right: 244px;
+}

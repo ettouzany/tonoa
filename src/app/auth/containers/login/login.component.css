@@ -43,11 +43,11 @@ mat-form-field {
 }
 .actions {
   height: 62px;
-  background-color: #f9a826;
+  background-color: #2F2E41;
   border: 0;
 }
 .actions:active {
   height: 62px;
-  background-color: #f9a826 !important;
+  background-color: #6C63FF !important;
   border: 0;
 }

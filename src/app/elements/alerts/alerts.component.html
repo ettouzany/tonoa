@@ -1,0 +1,16 @@
+<div *ngIf="alerts[0]" class="alerts bgblack">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 ">
+      <div class="my-3" *ngFor="let alert of alerts">
+        <card title="{{alert.title}}" >
+          <i *ngIf="alert.params.close" class="material-icons-two-tone float-right">more_vert</i>
+          <p>{{alert.message}}</p>
+          <div class="row">
+            <div class="col-6"><button class=" w-100"class="btn btn-secondary w-100" (click)="close(alert)">non</button>    </div>
+            <div class="col-6"><button class=" w-100" class="btn btn-danger w-100" (click)="action(alert)" >oui</button></div>
+          </div>
+        </card>
+      </div>
+    </div>
+  </div>
+</div>
