@@ -1,5 +1,5 @@
 .page {
-    display: table;
+    display: flex;
     width: 100%;
     height: calc(100%  - 72px) !important;
   }

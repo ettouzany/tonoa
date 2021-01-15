@@ -5,11 +5,15 @@ import { CreationComponent } from './creation/creation.component';
 
 const routes: Routes = [
     {
-      path: 'creer',
+      path: '',
       component: CreationComponent,
     },
     {
-      path: 'consulter',
+      path: 'create',
+      component: CreationComponent,
+    },
+    {
+      path: 'consult',
       component: ConsultationComponent,
     }
 ];
@@ -18,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class tornoaRoutingModule { }
+export class GameRoutingModule { }

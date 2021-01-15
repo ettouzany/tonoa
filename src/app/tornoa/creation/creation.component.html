@@ -1,47 +1,93 @@
-<div class="card">
-    
-    <div class="card-header" *ngIf="!currentId">Nouvelle entité</div>
-    <div class="card-header" *ngIf="currentId">Editer entité</div>
-    <div class="card-body">
-            <form [formGroup]="entitesForm">
-        <div class="row">
-          <div class="form-group col-12">
-            <label>Nom :</label>
-            <input type="text" formControlName="nom" class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
-            <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
-              <div *ngIf="f.nom.errors.required">Le champs est oblégatoire</div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="row">
-          <div class="form-group col-12">
-            <label>Code :</label>
-            <input type="text" formControlName="code" class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && f.code.errors }" />
-            <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
-              <div *ngIf="f.code.errors.required">Le champs est oblégatoire</div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="row">
-          <form (ngSubmit)="onCancel()" class="col-6">
-            <div class="float-right">
-              <button type="submit" class="btn btn-secondary" >Retour
-              </button>
-           </div>
-          </form>
-          <form (ngSubmit)="onSubmit()" class="col-6" >
-            <div class="">
-              <button   type="submit" class="btn btn-success">
-  
-               Valider</button>
-           </div>
-           </form>
-        </div>
-  
-      </form>
+<div class="row justify-content-center">
+  <card title="Create new tournament " class="col-xl-6 mt-xl-5">
+    <form [formGroup]="tornoasForm">
+<div class="row">
+  <div class="form-group col-12">
+    <label>Tournament name :</label>
+    <input type="text" formControlName="name" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+      <div *ngIf="f.name.errors.required">Le champs est oblégatoire</div>
     </div>
+  </div>
+  <div class="form-group col-12">
+    <label>Game :</label>
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="bgimg" style="background-image: url(assets/pubg_cover.jpg);">
+          </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="bgimg" style="background-image: url(assets/freefire_cover.jpg);">
+          </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="bgimg" style="background-image: url(assets/valorant_vover.jpg);">
+          </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="bgimg" style="background-image: url(assets/fortnite_cover.jpg);">
+          </div>
+      </div>
+  </div>
+    <input type="text" formControlName="name" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+      <div *ngIf="f.name.errors.required">Le champs est oblégatoire</div>
+    </div>
+  </div>
+  <div class="form-group col-12">
+    <label>Platform(s) :</label>
+    <div class="row">
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >Pc</button></div>
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >Ps</button></div>
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >XBox</button></div>
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >Nintendo</button></div>
+    </div>
+  </div>
+  <div class="form-group col-6">
+    <label>Size :</label>
+    <input type="text" formControlName="size" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.size.errors }" />
+    <div *ngIf="submitted && f.size.errors" class="invalid-feedback">
+      <div *ngIf="f.size.errors.required">Le champs est oblégatoire</div>
+    </div>
+  </div>
+  <div class="form-group col-6">
+      <label for="participantType">Participants</label>
+      <div class="form-row">
+        <div class="form-field radio-field">
+          <input id="participantType_radio_0" type="radio" name="participantType" value="1">
+          <label for="participantType_radio_0"> Players</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field radio-field">
+          <input id="participantType_radio_1" type="radio" name="participantType" value="2">
+          <label for="participantType_radio_1"> Teams</label>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<div class="row">
+  <form (ngSubmit)="onCancel()" class="col-6">
+    <div class="float-right">
+      <button type="submit" class="btn btn-secondary" >Return
+      </button>
+   </div>
+  </form>
+  <form (ngSubmit)="onSubmit()" class="col-6" >
+    <div class="">
+      <button   type="submit" class="btn btn-success">
+
+       Confirm</button>
+   </div>
+   </form>
+</div>
+
+</form>
+</card>
+
 </div>

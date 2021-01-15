@@ -55,7 +55,7 @@ export class CreationComponent implements OnInit {
           data => {
 
             //this.showToast('entites modifié avec success.');
-            this.router.navigate(['../consulter'], {
+            this.router.navigate(['../consult'], {
               relativeTo: this.currentRoute,
             });
           },
@@ -68,13 +68,13 @@ export class CreationComponent implements OnInit {
       this.entiteService
         .createEntite(this.entitesForm.value)
         .subscribe(data => {
-          this.router.navigate(['../consulter'], {
+          this.router.navigate(['../consult'], {
             relativeTo: this.currentRoute,
           });
         });
     }
 }
 onCancel() {
-  this.router.navigate(['pages', 'entites', 'consulter']);
+  this.router.navigate(['pages', 'entites', 'consult']);
 }
 }

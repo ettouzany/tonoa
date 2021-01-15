@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { HeaderService } from '../services/header.service';
@@ -10,9 +10,16 @@ import { SidebarService } from '../services/sidebar.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  showActions :boolean;
-  constructor(private authService: AuthService, private router: Router) { }
-
+  dotablet: boolean;
+  showbtn: boolean;
+  constructor(private authService: AuthService, private router: Router) {this.getScreenSize(); }
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+        SidebarService.menusecondopened =  window.innerWidth < 768 ?false:true;
+        this.dotablet = window.innerWidth > 768 ?false:true;
+        this.showbtn = window.innerWidth > 768 ?false:true;
+        console.log(this.dotablet);
+  }
   ngOnInit(): void {
   }
   tagglemenu(){

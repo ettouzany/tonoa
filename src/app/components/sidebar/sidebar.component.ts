@@ -20,26 +20,35 @@ export class SidebarComponent implements OnInit {
     },
     {
       open:false,
+      title:"My Tournament Structer",
+      icon:"emoji_events",
+      link:"tournament",
+      new:false,
+      notifications:95,
+      submenus: []
+    },
+    {
+      open:false,
       title:"Games",
       icon:"sports_esports",
-      link:"entites",
+      link:"game",
       new:false,
       notifications:95,
       submenus: [
         {
           open:false,
-          title:"Creer",
+          title:"create",
           icon:"add_circle",
-          link:"creer",
+          link:"create",
           new:false,
           notifications:95,
           submenus: []
         },
         {
           open:false,
-          title:"Consulter",
+          title:"consult",
           icon:"list_alt",
-          link:"consulter",
+          link:"consult",
           new:false,
           notifications:95,
           submenus: []
@@ -50,24 +59,24 @@ export class SidebarComponent implements OnInit {
       open:false,
       title:"Platforms",
       icon:"important_devices",
-      link:"entites",
+      link:"platform",
       new:false,
       notifications:95,
       submenus: [
         {
           open:false,
-          title:"Creer",
+          title:"create",
           icon:"add_circle",
-          link:"creer",
+          link:"create",
           new:false,
           notifications:95,
           submenus: []
         },
         {
           open:false,
-          title:"Consulter",
+          title:"consult",
           icon:"list_alt",
-          link:"consulter",
+          link:"consult",
           new:false,
           notifications:95,
           submenus: []
@@ -78,24 +87,24 @@ export class SidebarComponent implements OnInit {
       open:false,
       title:"Countries",
       icon:"public",
-      link:"entites",
+      link:"country",
       new:false,
       notifications:95,
       submenus: [
         {
           open:false,
-          title:"Creer",
+          title:"create",
           icon:"add_circle",
-          link:"creer",
+          link:"create",
           new:false,
           notifications:95,
           submenus: []
         },
         {
           open:false,
-          title:"Consulter",
+          title:"consult",
           icon:"list_alt",
-          link:"consulter",
+          link:"consult",
           new:false,
           notifications:95,
           submenus: []

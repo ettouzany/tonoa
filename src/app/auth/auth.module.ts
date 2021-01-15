@@ -9,6 +9,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { RandomGuard } from './guards/random.guard';
 import { TokenInterceptor } from './token.interceptor';
+import { CardModule } from '../elements/card/card.module';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -27,6 +28,7 @@ import { TokenInterceptor } from './token.interceptor';
     RouterModule,
     HttpClientModule,
     ReactiveFormsModule,
+    CardModule
     //MatButtonModule,
     //MatFormFieldModule,
     //MatInputModule

@@ -23,12 +23,13 @@ export class AuthService {
         tap(accessToken => this.doLoginUser(user.username, {jwt:accessToken.accessToken,refreshToken:accessToken.accessToken})),
         mapTo(true),
         catchError(error => {
-          alert(error.error);
           return of(false);
         }));
   }
 
-  
+  signup(user: any) {
+    return this.http.post(`${config.apiUrl}/auth/signup` , user);
+  }
 
   logout() {
    /* return this.http.post<any>(`${config.apiUrl}/logout`, {

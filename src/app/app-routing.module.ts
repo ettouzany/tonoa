@@ -17,6 +17,46 @@ const routes: Routes = [
     canActivate: [RandomGuard],
     canLoad: [RandomGuard]
   },
+  
+  {
+    path: 'participants',
+    loadChildren: './participants/participants.module#ParticipantsModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
+  {
+    path: 'game',
+    loadChildren: './game/game.module#GameModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
+  
+  {
+    path: 'platform',
+    loadChildren: './platform/platform.module#PlatformModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
+  
+  {
+    path: 'country',
+    loadChildren: './country/country.module#CountryModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
+  {
+    path: 'tornoa',
+    loadChildren: './tornoa/tornoa.module#TornoaModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
+  
+  {
+    path: 'tournament',
+    loadChildren: './tournament/tournament-module#TournamentModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
   {
     path: 'home',
     loadChildren: './home/home.module#HomeModule',
@@ -35,10 +75,12 @@ const routes: Routes = [
     loadChildren: './entites/entites.module#EntitesModule',
     canActivate: [RandomGuard],
     canLoad: [RandomGuard]
-  }
+  },
+  { path: '**', loadChildren: './home/home.module#HomeModule',    canActivate: [RandomGuard],
+  canLoad: [RandomGuard] },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

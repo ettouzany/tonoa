@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+  <card title="Basic Information " class="col-xl-6 mt-xl-5">
+    <form [formGroup]="gameForm">
+<div class="row">
+  <div class="form-group col-12">
+    <label>Game name :</label>
+    <input type="text" formControlName="name" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+      <div *ngIf="f.name.errors.required">Le champs est oblégatoire</div>
+    </div>
+  </div>
+
+  <div class="form-group col-12">
+    <label>Game Platforms:</label><br>
+    <div class="row">
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >Pc</button></div>
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >Mobile</button></div>
+      <div class="col my-3"><button type="submit" class="btn btn-secondary w-100" >XBox</button></div>
+    </div>
+  </div>
+  <div class="form-group col-12">
+    <label>Game Logo:</label><br>
+    <input  type="file" id="participant_edit_logo_uploadedFile" name="participant_edit[logo][uploadedFile]">
+  </div>
+  <div class="form-group col-12">
+    <label>Game Cover:</label><br>
+    <input  type="file" id="participant_edit_logo_uploadedFile" name="participant_edit[logo][uploadedFile]">
+  </div>
+  <div class="form-group col-12">
+    <label>Game Background Cover:</label><br>
+    <input  type="file" id="participant_edit_logo_uploadedFile" name="participant_edit[logo][uploadedFile]">
+  </div>
+</div>
+
+<div class="row">
+  <form (ngSubmit)="onCancel()" class="col-6">
+    <div class="float-right">
+      <button type="submit" class="btn btn-secondary" >Return
+      </button>
+   </div>
+  </form>
+  <form (ngSubmit)="onSubmit()" class="col-6" >
+    <div class="">
+      <button   type="submit" class="btn btn-success">
+
+       Add</button>
+   </div>
+   </form>
+</div>
+
+</form>
+</card>
+
+</div>

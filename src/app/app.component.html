@@ -1,20 +1,18 @@
-
-
 <div class="mypage">
     <div class="main">
         <app-header *ngIf ="isLoggedIn()"></app-header>
     <div class="h-100" [ngClass]="{'page': isLoggedIn()}">
         <app-sidebar *ngIf ="isLoggedIn()"></app-sidebar>
         <div class="h-100 " [ngClass]="{'page-content': isLoggedIn()}">
-<div class="count">
+<div class="count  p-0" [ngClass]="{'px-3': isLoggedIn()}">
     <router-outlet></router-outlet>
 </div>
 <app-footer  *ngIf = "isLoggedIn()"></app-footer>
 
-        </div>
+</div>
     </div>    
     </div>
-    <div class="chat " [ngClass]="{'page': isLoggedIn(), 'chatClose':!isChatOpen()}"  *ngIf = "isLoggedIn()">
+    <div class="chat" [ngClass]="{'page': isLoggedIn(), 'chatClose':!isChatOpen()}"  *ngIf = "isLoggedIn()">
         <app-chat *ngIf = "isChatOpen()"></app-chat>
     </div>   
 </div>

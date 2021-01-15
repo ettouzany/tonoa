@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+
+<div class="col-xl-9 mt-xl-5">
+<div class="row mb-3">
+    <div class="col-12">
+        <card title="Status">
+            <p class="text-center">
+                You should now enable the registration or manually add participants. You could also create the tournament structure.
+
+            </p>
+        </card>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <card title=" Structure">
+            The tournament does not have any stage yet. You should create the first stage and may use our Structure Guide if you are not sure of which stage to create.
+        
+            <div class="row m-3">
+                <form  class="col-6">
+                  <div class="float-right">
+                    <button type="submit" class="btn btn-secondary" >Consult
+                    </button>
+                 </div>
+                </form>
+                <form  class="col-6" >
+                  <div class="">
+                    <button   type="submit" class="btn btn-success">Add</button>
+                 </div>
+                 </form>
+              </div>
+        </card>
+    </div>
+
+    <div class="col-6">
+        <card title="Participants">
+            <p class="text-center">You can manually create participants, especially if you do not use the registration. You may configure the check-in either way.
+
+            </p>
+
+                <div class="row">
+                    <form class="col-6">
+                      <div class="float-right">
+                        <button type="submit" class="btn btn-secondary" >Consult
+                        </button>
+                     </div>
+                    </form>
+                    <form  class="col-6" >
+                      <div class="">
+                        <button (click)="goto('../../participants')" type="submit" class="btn btn-success">Add</button>
+                     </div>
+                     </form>
+                  </div>
+        </card>
+    </div>
+</div>
+</div> 
+  
+  </div>

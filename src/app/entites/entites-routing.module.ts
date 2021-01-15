@@ -5,11 +5,11 @@ import { CreationComponent } from './creation/creation.component';
 
 const routes: Routes = [
     {
-      path: 'creer',
+      path: 'create',
       component: CreationComponent,
     },
     {
-      path: 'consulter',
+      path: 'consult',
       component: ConsultationComponent,
     }
 ];

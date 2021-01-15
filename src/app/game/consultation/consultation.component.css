@@ -1,0 +1,11 @@
+.bgimg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 314px;
+    margin: 16px auto;
+}
+.bgimg:hover {
+
+    border: 4px solid #2f2e41;
+}

@@ -1,0 +1,15 @@
+.bg-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: #0000006b;
+}
+:host::ng-deep .bg-overlay .card{
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: calc(10vh - 60px);
+}

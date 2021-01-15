@@ -2,19 +2,21 @@
     <div class="countent">
         <button (click)="tagglemenu()" class="iconbtn w-50px"><img width="24" class="" src="assets/header/list.svg" alt=""></button>
         <img width="72" class="my-4" src="assets/logo.svg" alt="">
-        <div class="float-right d-flex">
-            <button class="w-50px iconbtn">
-                <i class="material-icons-two-tone  position-relative">search</i>
-            </button>
-            <button (click)="openfull()" class="w-50px iconbtn">
-                <i class="material-icons-two-tone  position-relative">{{fullscreen()?"fullscreen_exit":"fullscreens"}}</i>
-            </button>
-            <button (click)="openchat()" class="w-50px iconbtn">
-                <i class="material-icons-two-tone  position-relative">chat_bubble_outline</i>
-            </button>
-            <button (click)="openchat()" class="w-50px iconbtn">
-                <i class="material-icons-outlined  position-relative">notifications</i>
-            </button>
+        <div class="float-right row m-0 bg-white" [ngClass]="{'showmenu': showbtn,'shadowbox': showbtn}" *ngIf="!dotablet">
+            <div>
+                <button class="w-50px iconbtn">
+                    <i class="material-icons-two-tone  position-relative">search</i>
+                </button>
+                <button (click)="openfull()" class="w-50px iconbtn">
+                    <i class="material-icons-two-tone  position-relative">{{fullscreen()?"fullscreen_exit":"fullscreens"}}</i>
+                </button>
+                <button (click)="openchat()" class="w-50px iconbtn">
+                    <i class="material-icons-two-tone  position-relative">chat_bubble_outline</i>
+                </button>
+                <button (click)="opennotifications()" class="w-50px iconbtn">
+                    <i class="material-icons-outlined  position-relative">notifications</i>
+                </button>
+            </div>
             <button (click)="showActions = !showActions" class="iconbtn p-1 profile">
                 <img width="38" class="ml-1 rounded-circle shadowbox" src="assets/avatar.png" alt="">
                 <span class="mx-3 font-weight-bold">Name Last</span>
@@ -25,10 +27,12 @@
                         <li><i class="material-icons-two-tone position-relative">person_outline</i> action</li>
                         <li><i class="material-icons-two-tone position-relative">person_outline</i> action</li>
                         <li (click)="logout()"><i class="material-icons-two-tone position-relative">exit_to_app</i> Logout</li>
-
                     </ul>
                 </div>
             </button>
         </div>
+        <button *ngIf="showbtn" (click)="dotablet = !dotablet" class="w-50px iconbtn float-right" >
+            <i class="material-icons-outlined position-relative">apps</i>
+        </button>
     </div>
 </div>
